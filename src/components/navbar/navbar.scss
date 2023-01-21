@@ -1,0 +1,9 @@
+a:hover svg {
+  stroke: #00ff84;
+  transform: translateY(-3px);
+  transition: all .2s;
+}
+
+svg {
+  transition: all .2s;
+}

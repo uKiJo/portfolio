@@ -7,7 +7,7 @@ interface HomepageProps {}
 
 const Homepage: React.FC<HomepageProps> = (props) => {
   return (
-    <section className="app-container md:w-4/5 mx-auto">
+    <section className="app-container sm:w-4/5 mx-auto">
       <Hero />
       <LatestWork />
     </section>

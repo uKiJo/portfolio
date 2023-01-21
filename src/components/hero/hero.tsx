@@ -20,17 +20,17 @@ const Hero: React.FC = () => {
 
   return (
     <header className="mb-24">
-      <div className="flex justify-between items-center h-min font-poppins text-primary dark:text-txt">
+      <div className="flex md:flex-row xs:flex-col justify-between items-center h-min font-poppins text-primary dark:text-txt">
         <div className="content">
           <Trail>
             <h2 className="text-xl mb-2">Hi There,</h2>
-            <h1 className="lg:text-6xl md:text-5xl font-bold leading-14 mb-6">
+            <h1 className="lg:text-6xl xs:text-5xl font-bold leading-14 mb-6">
               I am Youn<span className="text-lsecondary">e</span>s
             </h1>
-            <p className="lg:text-3xl md:text-2xl font-semibold leading-14">
+            <p className="lg:text-3xl xs:text-2xl font-semibold leading-14">
               I am a Frontend developer.
             </p>
-            <p className="lg:text-xl md:text-lg font-semibold">
+            <p className="lg:text-xl xs:text-lg font-semibold">
               & i love building stuff on the web.
             </p>
             <Link
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
           </Trail>
         </div>
 
-        <div className="lg:w-[350px] md:w-72">
+        <div className="lg:w-[350px] xs:w-72 xs:mt-12">
           <img src={illustration} alt="me" />
         </div>
       </div>

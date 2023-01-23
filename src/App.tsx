@@ -29,7 +29,7 @@ function App() {
   }, [pathname]);
 
   return (
-    <div className="App relative dark:text-white transition p-2">
+    <div className="App dark:text-white transition">
       <ThemeContextWrapper>
         <Navbar />
         {transitions((style, item) => (

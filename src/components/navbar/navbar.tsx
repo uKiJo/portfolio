@@ -5,60 +5,61 @@ import { useSpring, animated } from 'react-spring';
 import useMeasure from 'react-use-measure';
 
 import { FiLinkedin, FiFacebook, FiTwitter, FiGithub } from 'react-icons/fi';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { AiOutlineMenu } from 'react-icons/ai';
+import { RiCloseFill } from 'react-icons/ri';
 import SwitchButton from '../switch/switch';
 
 import './navbar.scss';
 
 interface NavbarProps {}
 
-const getHeight = (small: boolean, open: boolean) => {
-  if (small) {
-    return open ? 500 : 0;
-  } else {
-    return 'auto';
-  }
+const getHeight = (open: boolean) => {
+  return open ? '100vh' : '0vh';
 };
+
+const items = ['Home', 'Projects', 'Skills', 'Contact'];
 
 const Navbar: React.FC<NavbarProps> = (props) => {
   const isSmallScreen = useMediaQuery({ query: '(max-width: 500px)' });
   const [isOpen, setIsOpen] = useState(false);
-  const navHeight = getHeight(isSmallScreen, isOpen);
+  const navHeight = getHeight(isOpen);
   const style = useSpring({ height: navHeight });
 
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="app-container sm:w-4/5 mx-auto pt-12 pb:px-4 mb-24 relative">
+    <nav className="app-container sm:w-4/5 mx-auto bp:pt-12 pb:px-4 mb-24 relative">
       {isSmallScreen && (
-        <div className="w-full flex justify-end p-2">
-          {isOpen ? (
-            <AiOutlineClose size={25} onClick={toggleOpen} />
-          ) : (
-            <AiOutlineMenu size={25} onClick={toggleOpen} />
-          )}
+        <div className="w-full flex justify-end p-6">
+          <AiOutlineMenu size={40} onClick={toggleOpen} />
         </div>
       )}
 
       <animated.div
-        style={style}
-        className={`flex bp:static xs:absolute xs:top-[98px] w-full xs:left-0 grow overflow-hidden md:flex-row xs:flex-col items-center md:justify-between xs:justify-start w-full overflow-hidden z-10 dark:bg-red-500`}
+        style={isSmallScreen ? style : undefined}
+        className={`flex bp:static xs:fixed xs:top-0 w-full xs:left-0 grow overflow-hidden md:flex-row xs:flex-col items-center md:justify-between xs:justify-start w-full z-10 bp:bg-[transparent] bp:dark:bg-[transparent] xs:bg-txt xs:dark:bg-lprimary`}
       >
-        <ul className="bp:flex bp:justify-center font-poppins font-semibold text-primary dark:text-txt w-full">
-          <li onClick={toggleOpen} className="py-2 md:pr-6 xs:px-6">
-            <Link to="/">Home </Link>
+        <ul className="relative bp:flex md:justify-start bp:justify-center font-poppins font-semibold text-primary dark:text-txt w-full bp:p-0 xs:p-12">
+          <li
+            onClick={toggleOpen}
+            className={`${
+              isSmallScreen ? 'block' : 'hidden'
+            } absolute right-0 top-0 p-4 fill-white`}
+          >
+            <RiCloseFill size={40} className="stroke-txt" />
           </li>
-          <li className="py-2 px-6">
-            <Link to="/projects">Projects </Link>
-          </li>
-          <li className="py-2 px-6">
-            <Link to="/skills">Skills </Link>
-          </li>
-          <li className="py-2 px-6">
-            <Link to="/contact">Contact </Link>
-          </li>
+          {items.map((item) => (
+            <li
+              className="bp:p-4 xs:text-2xl bp:text-base xs:text-semibold xs:pb-4 text-center"
+              onClick={toggleOpen}
+            >
+              <Link to={`${item === 'Home' ? '/' : `/${item.toLowerCase()}`} `}>
+                {item}
+              </Link>
+            </li>
+          ))}
         </ul>
-        <div className="flex items-center sm:grow md:mt-0 xs:mt-6">
+        <div className="flex items-center sm:grow ">
           <div className="p-2">
             <SwitchButton />
           </div>

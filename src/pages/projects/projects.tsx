@@ -20,7 +20,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
         <Heading style="dark:text-txt text-lgrey sm:text-start xs:text-center">
           Projects
         </Heading>
-        <div className="flex sm:justify-start xs:justify-center md:gap-10 xs:gap-8 font-poppins flex-wrap">
+        <div className="flex sm:justify-start xs:justify-center font-poppins md:gap-10 xs:gap-6 flex-wrap p-4">
           <Trail>
             {projects.map((project) => (
               <Card key={project.id} {...project} />

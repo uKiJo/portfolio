@@ -15,10 +15,12 @@ interface TrailProps {
 
 const Projects: React.FC<ProjectsProps> = (props) => {
   return (
-    <section className="app-container mb-24">
+    <section className="app-container mb-24 sm:w-4/5 mx-auto">
       <div>
-        <Heading style="dark:text-txt text-lgrey">Projects</Heading>
-        <div className="flex gap-10 font-poppins">
+        <Heading style="dark:text-txt text-lgrey sm:text-start xs:text-center">
+          Projects
+        </Heading>
+        <div className="flex sm:justify-start xs:justify-center md:gap-10 xs:gap-8 font-poppins flex-wrap">
           <Trail>
             {projects.map((project) => (
               <Card key={project.id} {...project} />

@@ -18,11 +18,13 @@ const Skills: React.FC<SkillsProps> = (props) => {
     delay: i * 100,
   }));
   return (
-    <section className="app-container ">
-      <Heading style="dark:text-txt text-lgrey">Skills</Heading>
-      <div className="flex justify-between">
-        <div className="font-poppins text-txt-secondary text-xl mb-12 w-1/2">
-          <div className="mb-12">
+    <section className="app-container sm:w-4/5 mx-auto">
+      <Heading style="dark:text-txt text-lgrey sm:text-start xs:text-center">
+        Skills
+      </Heading>
+      <div className="flex md:flex-row xs:flex-col md:justify-between md:items-start xs:items-center sm:p-0 xs:p-6">
+        <div className="font-poppins text-txt-secondary md:text-xl xs:text-base mb-12 md:w-1/2 xs:w-full md:order-first xs:order-last">
+          <div className="mb-8">
             <p>
               Though necessary, i believe technologies we use to build our
               products are only tools and not what matters the most.
@@ -33,12 +35,12 @@ const Skills: React.FC<SkillsProps> = (props) => {
             </p>
             <p>As a frontend developer, i mainly use the stack stated below:</p>
           </div>
-          <div style={props} className="flex flex-wrap">
+          <div style={props} className="flex flex-wrap gap-4">
             {springs.map((props, i) => (
-              <animated.div key={i} style={props}>
+              <animated.div key={i} style={props} className="h-16">
                 <Tooltip.Provider key={techs[i].id}>
                   <Tooltip.Root>
-                    <Tooltip.Trigger className="mr-4 mb-4">
+                    <Tooltip.Trigger className="gap-8">
                       <div className="p-4 dark:bg-lprimary dark:shadow-none shadow-card4 rounded">
                         <svg className="w-8 h-8">
                           <use href={sprite + `#icon-${techs[i].svg}`} />
@@ -57,7 +59,7 @@ const Skills: React.FC<SkillsProps> = (props) => {
             ))}
           </div>
         </div>
-        <div>
+        <div className="lg:w-fit sm:w-72 xs:w-64 xs:mb-8">
           <img src={tools} alt="tools" />
         </div>
       </div>

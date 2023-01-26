@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
   const toggleOpen = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="app-container sm:w-4/5 mx-auto bp:pt-12 pb:px-4 mb-24 relative">
+    <nav className="app-container sm:w-4/5 mx-auto bp:pt-12 pb:px-4 md:mb-24 xs:mb-12 relative">
       {isSmallScreen && (
         <div className="w-full flex justify-end p-6">
           <AiOutlineMenu size={40} onClick={toggleOpen} />
@@ -48,8 +48,9 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           >
             <RiCloseFill size={40} className="stroke-txt" />
           </li>
-          {items.map((item) => (
+          {items.map((item, i) => (
             <li
+              key={i}
               className="bp:p-4 xs:text-2xl bp:text-base xs:text-semibold xs:pb-4 text-center"
               onClick={toggleOpen}
             >

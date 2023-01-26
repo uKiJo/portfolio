@@ -7,7 +7,9 @@ interface HeadingProps {
 
 const Heading: React.FC<HeadingProps> = ({ children, style }) => {
   return (
-    <h1 className={`mb-12 text-5xl font-poppins font-bold ${style}`}>
+    <h1
+      className={`md:mb-12 xs:mb-6 sm:text-5xl xs:text-3xl font-poppins font-bold ${style}`}
+    >
       {children}
     </h1>
   );

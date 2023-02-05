@@ -6,6 +6,7 @@ import Card from '../../components/card/card';
 import Heading from '../../components/shared/heading';
 
 import { data as projects } from '../../components/latest-work/data';
+import { useParams } from 'react-router-dom';
 
 interface ProjectsProps {}
 
@@ -14,6 +15,8 @@ interface TrailProps {
 }
 
 const Projects: React.FC<ProjectsProps> = (props) => {
+  let param = useParams();
+  console.log(param);
   return (
     <section className="app-container mb-24 sm:w-4/5 mx-auto">
       <div>

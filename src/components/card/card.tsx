@@ -1,16 +1,21 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { FiExternalLink, FiGithub } from 'react-icons/fi';
 
 interface CardProps {
+  id: number;
   image: string;
   title: string;
   description: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, image, description }) => {
+const Card: React.FC<CardProps> = ({ title, image, description, id }) => {
   return (
-    <div className="md:w-64 md:h-96 xs:w-56 p-6 flex flex-col shadow-card3 hover:shadow-card4 dark:hover:shadow-none transition rounded-md overflow-hidden bg-grey dark:bg-lprimary cursor-pointer hover:-translate-y-1">
+    <NavLink
+      to={`${id.toString()}`}
+      className="md:w-64 md:h-96 xs:w-56 p-6 flex flex-col shadow-card3 hover:shadow-card4 dark:hover:shadow-none transition rounded-md overflow-hidden bg-grey dark:bg-lprimary cursor-pointer hover:-translate-y-1"
+    >
       <div className=" rounded-lg items-center">
         <div className="p-4 dark:bg-gradient-180 dark:from-lgrey-0 dark:to-lgrey rounded-lg">
           <img className="h-2/3 rounded " src={image} alt={title} />
@@ -33,7 +38,7 @@ const Card: React.FC<CardProps> = ({ title, image, description }) => {
           />
         </div>
       </div>
-    </div>
+    </NavLink>
   );
 };
 

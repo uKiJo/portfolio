@@ -1,6 +1,12 @@
 import React from 'react';
 import * as Tooltip from '@radix-ui/react-tooltip';
-import { useSprings, animated } from 'react-spring';
+import {
+  useSpring,
+  useSprings,
+  useChain,
+  animated,
+  useSpringRef,
+} from 'react-spring';
 
 import Heading from '../../components/shared/heading';
 
@@ -12,17 +18,34 @@ import './skills.scss';
 interface SkillsProps {}
 
 const Skills: React.FC<SkillsProps> = (props) => {
+  const iconsRef = useSpringRef();
+  const skillRef = useSpringRef();
+
   const [springs] = useSprings(techs.length, (i) => ({
+    ref: iconsRef,
     from: { opacity: 0, y: 10 },
     to: { opacity: 1, y: 0 },
     delay: i * 100,
   }));
+
+  const skillProps = useSpring({
+    ref: skillRef,
+    from: { opacity: 0, y: 10 },
+    to: { opacity: 1, y: 0 },
+    delay: 700,
+  });
+
+  useChain([skillRef, iconsRef], [0, 1]);
+
   return (
     <section className="app-container sm:w-4/5 mx-auto">
       <Heading style="dark:text-txt text-lgrey sm:text-start xs:text-center">
         Skills
       </Heading>
-      <div className="flex md:flex-row xs:flex-col md:justify-between md:items-start xs:items-center sm:p-0 xs:p-6">
+      <animated.div
+        style={skillProps}
+        className="flex md:flex-row xs:flex-col md:justify-between md:items-start xs:items-center sm:p-0 xs:p-6"
+      >
         <div className="font-poppins text-txt-secondary md:text-xl xs:text-base mb-12 md:w-1/2 xs:w-full md:order-first xs:order-last">
           <div className="mb-8">
             <p>
@@ -62,7 +85,7 @@ const Skills: React.FC<SkillsProps> = (props) => {
         <div className="lg:w-fit sm:w-72 xs:w-64 xs:mb-8">
           <img src={tools} alt="tools" />
         </div>
-      </div>
+      </animated.div>
     </section>
   );
 };

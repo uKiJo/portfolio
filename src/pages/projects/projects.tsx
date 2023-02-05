@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useTrail, animated } from 'react-spring';
+import { useTrail, useSpring, animated } from 'react-spring';
 
 import Card from '../../components/card/card';
 import Heading from '../../components/shared/heading';
@@ -15,21 +15,28 @@ interface TrailProps {
 }
 
 const Projects: React.FC<ProjectsProps> = (props) => {
-  let param = useParams();
-  console.log(param);
+  const projectProp = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    delay: 700,
+  });
+
   return (
     <section className="app-container mb-24 sm:w-4/5 mx-auto">
       <div>
         <Heading style="dark:text-txt text-lgrey sm:text-start xs:text-center">
           Projects
         </Heading>
-        <div className="flex sm:justify-start xs:justify-center font-poppins md:gap-10 xs:gap-6 flex-wrap p-4">
+        <animated.div
+          style={projectProp}
+          className="flex sm:justify-start xs:justify-center font-poppins md:gap-10 xs:gap-6 flex-wrap p-4"
+        >
           <Trail>
             {projects.map((project) => (
               <Card key={project.id} {...project} />
             ))}
           </Trail>
-        </div>
+        </animated.div>
       </div>
     </section>
   );

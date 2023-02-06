@@ -13,7 +13,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ title, image, description, id }) => {
   return (
     <NavLink
-      to={`${id.toString()}`}
+      to={`/projects/${id.toString()}`}
       className="md:w-64 md:h-96 xs:w-56 p-6 flex flex-col shadow-card3 hover:shadow-card4 dark:hover:shadow-none transition rounded-md overflow-hidden bg-grey dark:bg-lprimary cursor-pointer hover:-translate-y-1"
     >
       <div className=" rounded-lg items-center">

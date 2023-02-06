@@ -8,7 +8,6 @@ import {
 } from 'react-router-dom';
 
 import { useEffect, useRef } from 'react';
-import { Transition } from 'react-transition-group';
 import { useTransition, useSpringRef, animated, useSpring } from 'react-spring';
 import './App.css';
 import Navbar from './components/navbar/navbar';

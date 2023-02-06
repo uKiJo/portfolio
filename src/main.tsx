@@ -14,6 +14,8 @@ import Homepage from './pages/homepage/homepage';
 import Skills from './pages/skills/skills';
 import Contact from './pages/contact/contact';
 
+import { loader as projectLoader } from './components/project/project';
+
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
@@ -33,7 +35,12 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Homepage />} />
-      <Route path="projects" element={<Projects />}></Route>
+      <Route path="projects" element={<Projects />} />
+      <Route
+        path="projects/:projectId"
+        element={<Project />}
+        loader={projectLoader}
+      />
       <Route path="skills" element={<Skills />} />
       <Route path="contact" element={<Contact />} />
     </Route>

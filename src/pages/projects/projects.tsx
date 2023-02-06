@@ -22,7 +22,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
   });
 
   return (
-    <section className="app-container mb-24 sm:w-4/5 mx-auto">
+    <section className="app-container sm:w-4/5 mx-auto">
       <div>
         <Heading style="dark:text-txt text-lgrey sm:text-start xs:text-center">
           Projects

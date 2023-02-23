@@ -40,6 +40,17 @@ const Navbar: React.FC<NavbarProps> = (props) => {
         className={`flex bp:static xs:fixed xs:top-0 w-full xs:left-0 grow overflow-hidden md:flex-row xs:flex-col items-center md:justify-between xs:justify-start w-full z-10 bp:bg-[transparent] bp:dark:bg-[transparent] xs:bg-txt xs:dark:bg-lprimary`}
       >
         <ul className="relative bp:flex md:justify-start bp:justify-center font-poppins font-semibold text-primary dark:text-txt w-full bp:p-0 xs:p-12">
+          {items.map((item, i) => (
+            <li
+              key={i}
+              className="lg:first:pl-0 bp:p-4 xs:text-2xl bp:text-base xs:text-semibold xs:pb-4 text-center"
+              onClick={toggleOpen}
+            >
+              <Link to={`${item === 'Home' ? '/' : `/${item.toLowerCase()}`} `}>
+                {item}
+              </Link>
+            </li>
+          ))}
           <li
             onClick={toggleOpen}
             className={`${
@@ -48,17 +59,6 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           >
             <RiCloseFill size={40} className="stroke-txt" />
           </li>
-          {items.map((item, i) => (
-            <li
-              key={i}
-              className="bp:p-4 xs:text-2xl bp:text-base xs:text-semibold xs:pb-4 text-center"
-              onClick={toggleOpen}
-            >
-              <Link to={`${item === 'Home' ? '/' : `/${item.toLowerCase()}`} `}>
-                {item}
-              </Link>
-            </li>
-          ))}
         </ul>
         <div className="flex items-center sm:grow ">
           <div className="p-2">

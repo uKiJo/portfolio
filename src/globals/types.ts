@@ -1,4 +1,4 @@
-export interface PageType {
+export interface ProjectType {
   id: number;
   title: string;
   image: string;

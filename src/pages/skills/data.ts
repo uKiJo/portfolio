@@ -49,4 +49,14 @@ export const data = [
     name: 'Tailwindcss',
     svg: 'tailwindcss',
   },
+  {
+    id: 11,
+    name: 'D3',
+    svg: 'd3-dot-js',
+  },
+  {
+    id: 12,
+    name: 'Typescript',
+    svg: 'typescript',
+  },
 ];

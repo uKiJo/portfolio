@@ -64,14 +64,14 @@ const Skills: React.FC<SkillsProps> = (props) => {
                 <Tooltip.Provider key={techs[i].id}>
                   <Tooltip.Root>
                     <Tooltip.Trigger className="gap-8">
-                      <div className="p-4 dark:bg-lprimary dark:shadow-none shadow-card4 rounded">
+                      <div className="p-4 dark:bg-lprimary bg-white dark:shadow-none shadow-card4 rounded">
                         <svg className="w-8 h-8">
                           <use href={sprite + `#icon-${techs[i].svg}`} />
                         </svg>
                       </div>
                     </Tooltip.Trigger>
                     <Tooltip.Portal>
-                      <Tooltip.Content className="TooltipContent dark:bg-txt">
+                      <Tooltip.Content className="TooltipContent dark:bg-txt bg-white">
                         {techs[i].name}
                         <Tooltip.Arrow className="dark:fill-txt fill-white" />
                       </Tooltip.Content>

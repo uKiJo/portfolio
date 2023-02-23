@@ -59,4 +59,9 @@ export const data = [
     name: 'Typescript',
     svg: 'typescript',
   },
+  {
+    id: 13,
+    name: 'Three.js',
+    svg: 'three-js',
+  },
 ];

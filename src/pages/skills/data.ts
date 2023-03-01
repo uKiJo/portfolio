@@ -64,4 +64,9 @@ export const data = [
     name: 'Three.js',
     svg: 'three-js',
   },
+  {
+    id: 14,
+    name: 'Remix',
+    svg: 'remix',
+  },
 ];

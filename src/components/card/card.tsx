@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ title, image, description, id }) => {
   return (
     <NavLink
       to={`/projects/${id.toString()}`}
-      className="md:w-64 md:h-96 xs:w-56 p-6 flex flex-col shadow-card3 hover:shadow-card4 dark:hover:shadow-none transition rounded-md overflow-hidden bg-grey dark:bg-lprimary cursor-pointer hover:-translate-y-1"
+      className="md:w-64 md:h-96 xs:w-56 p-6 flex flex-col shadow-card3 hover:shadow-card4 dark:hover:shadow-none transition rounded-md overflow-hidden bg-grey dark:bg-lprimary cursor-pointer "
     >
       <div className=" rounded-lg items-center">
         <div className="p-4 dark:bg-gradient-180 dark:from-lgrey-0 dark:to-lgrey rounded-lg">
@@ -36,6 +36,7 @@ const Card: React.FC<CardProps> = ({ title, image, description, id }) => {
             className="dark:stroke-txt stroke-lgrey cursor-pointer hover:stroke-lsecondary dark:hover:stroke-lsecondary transition"
             size={20}
           />
+          <p>2</p>
         </div>
       </div>
     </NavLink>

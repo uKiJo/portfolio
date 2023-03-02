@@ -6,7 +6,6 @@ import Card from '../../components/card/card';
 import Heading from '../../components/shared/heading';
 
 import { data as projects } from '../../components/latest-work/data';
-import { useParams } from 'react-router-dom';
 
 interface ProjectsProps {}
 

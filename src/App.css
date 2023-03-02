@@ -5,3 +5,9 @@
     margin: 0 auto;
   }
 }
+
+.social-media:hover svg {
+  stroke: #00ff84;
+  transform: translateY(-3px);
+  transition: all .2s;
+}

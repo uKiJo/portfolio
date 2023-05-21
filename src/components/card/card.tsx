@@ -1,16 +1,25 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import { FiExternalLink, FiGithub } from 'react-icons/fi';
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 interface CardProps {
   id: number;
   image: string;
   title: string;
   description: string;
+  url: string;
+  repo: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, image, description, id }) => {
+const Card: React.FC<CardProps> = ({
+  title,
+  image,
+  description,
+  id,
+  url,
+  repo,
+}) => {
   return (
     <NavLink
       to={`/projects/${id.toString()}`}
@@ -30,13 +39,13 @@ const Card: React.FC<CardProps> = ({ title, image, description, id }) => {
         <div className="flex">
           <a
             className="p-2 dark:stroke-txt stroke-lgrey cursor-pointer hover:stroke-lsecondary dark:hover:stroke-lsecondary social-media"
-            href=""
+            href={url}
           >
             <FiExternalLink size={20} />
           </a>
           <a
             className=" p-2 dark:stroke-txt stroke-lgrey cursor-pointer hover:stroke-lsecondary dark:hover:stroke-lsecondary social-media"
-            href=""
+            href={repo}
           >
             <FiGithub size={20} />
           </a>

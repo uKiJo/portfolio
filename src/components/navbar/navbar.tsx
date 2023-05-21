@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useMediaQuery } from 'react-responsive';
-import { useSpring, animated } from 'react-spring';
-import useMeasure from 'react-use-measure';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
+import { useSpring, animated } from "react-spring";
+import useMeasure from "react-use-measure";
 
-import { FiLinkedin, FiFacebook, FiTwitter, FiGithub } from 'react-icons/fi';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { RiCloseFill } from 'react-icons/ri';
-import SwitchButton from '../switch/switch';
+import { FiLinkedin, FiFacebook, FiTwitter, FiGithub } from "react-icons/fi";
+import { AiOutlineMenu } from "react-icons/ai";
+import { RiCloseFill } from "react-icons/ri";
+import SwitchButton from "../switch/switch";
 
-import './navbar.scss';
+import "./navbar.scss";
 
 interface NavbarProps {}
 
 const getHeight = (open: boolean) => {
-  return open ? '100vh' : '0vh';
+  return open ? "100vh" : "0vh";
 };
 
-const items = ['Home', 'Projects', 'Skills', 'Contact'];
+const items = ["Home", "Projects", "Skills", "Contact"];
 
 const Navbar: React.FC<NavbarProps> = (props) => {
-  const isSmallScreen = useMediaQuery({ query: '(max-width: 500px)' });
+  const isSmallScreen = useMediaQuery({ query: "(max-width: 499px)" });
   const [isOpen, setIsOpen] = useState(false);
   const navHeight = getHeight(isOpen);
   const style = useSpring({ height: navHeight });
@@ -46,7 +46,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               className="lg:first:pl-0 bp:p-4 xs:text-2xl bp:text-base xs:text-semibold xs:pb-4 text-center"
               onClick={toggleOpen}
             >
-              <Link to={`${item === 'Home' ? '/' : `/${item.toLowerCase()}`} `}>
+              <Link to={`${item === "Home" ? "/" : `/${item.toLowerCase()}`} `}>
                 {item}
               </Link>
             </li>
@@ -54,7 +54,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           <li
             onClick={toggleOpen}
             className={`${
-              isSmallScreen ? 'block' : 'hidden'
+              isSmallScreen ? "block" : "hidden"
             } absolute right-0 top-0 p-4 fill-white`}
           >
             <RiCloseFill size={40} className="stroke-txt" />

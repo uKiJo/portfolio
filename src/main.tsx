@@ -1,20 +1,20 @@
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import "./index.css";
 import {
   BrowserRouter,
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
   Route,
-} from 'react-router-dom';
-import Project from './components/project/project';
-import Projects from './pages/projects/projects';
-import Homepage from './pages/homepage/homepage';
-import Skills from './pages/skills/skills';
-import Contact from './pages/contact/contact';
+} from "react-router-dom";
+import Project from "./pages/project/project";
+import Projects from "./pages/projects/projects";
+import Homepage from "./pages/homepage/homepage";
+import Skills from "./pages/skills/skills";
+import Contact from "./pages/contact/contact";
 
-import { loader as projectLoader } from './components/project/project';
+import { loader as projectLoader } from "./pages/project/project";
 
 // const router = createBrowserRouter([
 //   {
@@ -47,7 +47,7 @@ const router = createBrowserRouter(
   )
 );
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   // <BrowserRouter>
   //   <App />
   // </BrowserRouter>

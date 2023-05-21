@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { useTrail, useSpring, animated } from 'react-spring';
+import { useTrail, useSpring, animated } from "react-spring";
 
-import Card from '../../components/card/card';
-import Heading from '../../components/shared/heading';
+import Card from "../../components/card/card";
+import Heading from "../../components/shared/heading";
 
-import { data as projects } from '../../components/latest-work/data';
+import { data as projects } from "../../components/latest-work/data";
 
 interface ProjectsProps {}
 
@@ -28,7 +28,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
         </Heading>
         <animated.div
           style={projectProp}
-          className="flex sm:justify-start xs:justify-center font-poppins md:gap-10 xs:gap-6 flex-wrap p-4"
+          className="flex sm:justify-start xs:justify-center font-poppins md:gap-10 xs:gap-6 flex-wrap bp:p-0 xs:p-4"
         >
           <Trail>
             {projects.map((project) => (

@@ -6,7 +6,7 @@ export default function ErrorPage() {
   if (isRouteErrorResponse(error)) {
     if (error.status === 401) {
       return <p>{error.statusText}</p>;
-    
+    }
   }
 
   return (

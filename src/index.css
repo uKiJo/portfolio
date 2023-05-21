@@ -20,7 +20,20 @@ body {
   background-size: 40%, 40%;
   background-position: top right, bottom left;
   min-height: 100vh;
+}
 
+@media screen and (max-width: 1080px) {
+
+  #root {
+    background-size: 80%, 80%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  #root {
+    background-size: 100%, 100%;
+  }
 }
 
 

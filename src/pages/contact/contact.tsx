@@ -2,6 +2,7 @@ import React from "react";
 import { useSpring, animated } from "react-spring";
 import Heading from "../../components/shared/heading";
 import contact from "./contact.svg";
+import Description from "../../components/shared/description";
 
 interface ContactProps {}
 
@@ -19,18 +20,20 @@ const Contact: React.FC<ContactProps> = (props) => {
       <animated.div style={contactProp}>
         <div className="font-poppins text-txt-secondary pb-6 mb-10 sm:p-0 xs:px-12">
           <div className="text-xl md:w-1/2 mb-6 md:text-xl xs:text-base">
-            <p>
+            <Description>
               I am currently looking for an opportunity, so if you are looking
-              for a frontend React developer, i would be really interested.
-            </p>
-            <p>So feel free to reach out to me via the button below.</p>
+              for a frontend React developer, i would be really interested. So
+              feel free to reach out to me via the button below
+            </Description>
           </div>
-          <a
-            className="bg-lsecondary text-base text-primary font-bold px-8 py-2 dark:bg-lsecondary hover:shadow-card hover:-translate-y-0.5 transition inline-block "
-            href="mailto:abdat.med.younes@gmail.com"
-          >
-            Contact
-          </a>
+          <div className="sm:justify-start xs:flex xs:justify-center">
+            <a
+              className="bg-lsecondary text-base text-primary font-bold px-8 py-2 dark:bg-lsecondary hover:shadow-card hover:-translate-y-0.5 transition inline-block"
+              href="mailto:abdat.med.younes@gmail.com"
+            >
+              Contact
+            </a>
+          </div>
         </div>
         <div className="flex md:justify-end xs:justify-center">
           <img

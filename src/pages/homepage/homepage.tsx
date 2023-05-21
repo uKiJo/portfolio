@@ -1,13 +1,10 @@
-import React from 'react';
-import Hero from '../../components/hero/hero';
-import LatestWork from '../../components/latest-work/latestWork';
-import Navbar from '../../components/navbar/navbar';
+import React from "react";
+import Hero from "../../components/hero/hero";
+import LatestWork from "../../components/latest-work/latestWork";
 
-interface HomepageProps {}
-
-const Homepage: React.FC<HomepageProps> = (props) => {
+const Homepage: React.FC = () => {
   return (
-    <section className="app-container sm:w-4/5 mx-auto">
+    <section className="app-container sm:w-4/5 mx-auto pb-6">
       <Hero />
       <LatestWork />
     </section>

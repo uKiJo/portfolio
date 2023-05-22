@@ -17,21 +17,6 @@ import Contact from "./pages/contact/contact";
 import { loader as projectLoader } from "./pages/project/project";
 import ErrorPage from "./components/errorPage/errorPage";
 
-// const router = createBrowserRouter([
-//   {
-//     path: "/",
-//     element: <Root />,
-//     loader: rootLoader,
-//     children: [
-//       {
-//         path: "team",
-//         element: <Team />,
-//         loader: teamLoader,
-//       },
-//     ],
-//   },
-// ]);
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
@@ -50,8 +35,5 @@ const router = createBrowserRouter(
 );
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  // <BrowserRouter>
-  //   <App />
-  // </BrowserRouter>
   <RouterProvider router={router} />
 );

@@ -3,6 +3,7 @@ import { useSpring, animated } from "react-spring";
 import Heading from "../../components/shared/heading";
 import contact from "./contact.svg";
 import Description from "../../components/shared/description";
+import Button from "../../components/shared/Button";
 
 interface ContactProps {}
 
@@ -28,11 +29,12 @@ const Contact: React.FC<ContactProps> = (props) => {
           </div>
           <div className="sm:justify-start xs:flex xs:justify-center">
             <a
-              className="bg-lsecondary text-base text-primary font-bold px-8 py-2 dark:bg-lsecondary hover:shadow-card hover:-translate-y-0.5 transition inline-block"
+              className="bg-lsecondary text-base text-primary font-bold px-8 py-2 dark:bg-lsecondary hover:shadow-card hover:-translate-y-0.5 transition inline-block rounded"
               href="mailto:abdat.med.younes@gmail.com"
             >
               Contact
             </a>
+            {/* <Button to="mailto:abdat.med.younes@gmail.com">Hoop!</Button> */}
           </div>
         </div>
         <div className="flex md:justify-end xs:justify-center">

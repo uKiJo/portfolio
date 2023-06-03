@@ -4,7 +4,7 @@ import LatestWork from "../../components/latest-work/latestWork";
 
 const Homepage: React.FC = () => {
   return (
-    <section className="app-container sm:w-4/5 mx-auto pb-6">
+    <section className="app-container sm:w-4/5 mx-auto pb-10">
       <Hero />
       <LatestWork />
     </section>

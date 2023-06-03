@@ -46,7 +46,10 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               className="lg:first:pl-0 bp:p-4 xs:text-2xl bp:text-base xs:text-semibold xs:pb-4 text-center"
               onClick={toggleOpen}
             >
-              <Link to={`${item === "Home" ? "/" : `/${item.toLowerCase()}`} `}>
+              <Link
+                className=""
+                to={`${item === "Home" ? "/" : `/${item.toLowerCase()}`} `}
+              >
                 {item}
               </Link>
             </li>

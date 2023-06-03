@@ -3,12 +3,8 @@
   will-change: transform, opacity;
 }
 
-
 .content {
   align-items: center;
   justify-content: center;
+  max-width: 80%;
 }
-
-// a:hover {
-//   transform: translateY(-5px);
-// }

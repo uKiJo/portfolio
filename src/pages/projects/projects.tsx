@@ -28,7 +28,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
         </Heading>
         <animated.div
           style={projectProp}
-          className="flex sm:justify-start xs:justify-center font-poppins md:gap-10 xs:gap-6 flex-wrap bp:p-0 xs:p-4"
+          className="flex sm:justify-start xs:justify-center font-poppins md:gap-10 xs:gap-6 flex-wrap bp:pb-6 bp:p-0 xs:p-6"
         >
           <Trail>
             {projects.map((project) => (

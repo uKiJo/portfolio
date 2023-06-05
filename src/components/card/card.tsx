@@ -25,15 +25,17 @@ const Card: React.FC<CardProps> = ({
       to={`/projects/${id.toString()}`}
       className="md:w-64 md:h-96 xs:w-56 p-6 flex flex-col shadow-card3 hover:shadow-card5 dark:hover:shadow-none  rounded-md overflow-hidden bg-grey dark:bg-lprimary cursor-pointer "
     >
-      <div className=" rounded-lg items-center">
+      <div className="rounded-lg items-center">
         <div className="p-4 dark:bg-gradient-180 dark:from-lgrey-0 dark:to-lgrey rounded-lg">
           <img className="h-2/3 rounded " src={image} alt={title} />
         </div>
       </div>
-      <div className="grow flex flex-col w-full text-lgrey dark:text-txt ">
+      <div className="grow flex flex-col w-full text-lgrey dark:text-txt">
         <div className="grow py-4">
-          <h1 className="text-lg font-semibold">{title}</h1>
-          <p className="text-sm text-txt-secondary"> {description} </p>
+          <h1 className="xs:mb-1 md:text-lg font-semibold">{title}</h1>
+          <p className="md:text-sm xs:text-xs text-txt-secondary">
+            {description}
+          </p>
         </div>
         <div className="h-[1px] w-full bg-txt-secondary opacity-50 mb-4"></div>
         <div className="flex">

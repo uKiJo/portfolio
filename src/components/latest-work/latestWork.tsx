@@ -1,13 +1,20 @@
 import React from "react";
-import Thumbnail from "../thumbnail/thumbnail";
+import { useSpring, animated } from "react-spring";
 
+import Thumbnail from "../thumbnail/thumbnail";
 import { data as projects } from "./data";
 
 interface LatestWorkProps {}
 
 const LatestWork: React.FC<LatestWorkProps> = (props) => {
+  const latestWorkAnimation = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 500 },
+    delay: 1000,
+  });
   return (
-    <section className="mx-auto">
+    <animated.section className="mx-auto" style={latestWorkAnimation}>
       <h1 className="font-poppins text-4xl font-semibold text-primary dark:text-txt mb-8 md:text-start xs:text-center">
         Latest work
       </h1>
@@ -16,7 +23,7 @@ const LatestWork: React.FC<LatestWorkProps> = (props) => {
           <Thumbnail key={project.id} {...project} />
         ))}
       </div>
-    </section>
+    </animated.section>
   );
 };
 

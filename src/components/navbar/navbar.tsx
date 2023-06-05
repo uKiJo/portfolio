@@ -39,7 +39,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
         style={isSmallScreen ? style : undefined}
         className={`flex bp:static xs:fixed xs:top-0 w-full xs:left-0 grow overflow-hidden md:flex-row xs:flex-col items-center md:justify-between xs:justify-start w-full z-10 bp:bg-[transparent] bp:dark:bg-[transparent] xs:bg-txt xs:dark:bg-lprimary`}
       >
-        <div className="relative bp:flex md:justify-start bp:justify-center font-poppins font-semibold text-primary dark:text-txt w-full bp:p-0 xs:p-12">
+        <div className="relative flex bp:flex-row xs:flex-col md:justify-start bp:justify-center font-poppins font-semibold text-primary dark:text-txt w-full bp:p-0 xs:p-12">
           {items.map((item, i) => (
             <Link
               onClick={toggleOpen}
@@ -50,14 +50,14 @@ const Navbar: React.FC<NavbarProps> = (props) => {
               {item}
             </Link>
           ))}
-          <li
+          <div
             onClick={toggleOpen}
             className={`${
               isSmallScreen ? "block" : "hidden"
             } absolute right-0 top-0 p-4 fill-white`}
           >
             <RiCloseFill size={40} className="stroke-txt" />
-          </li>
+          </div>
         </div>
         <div className="flex items-center sm:grow ">
           <div className="p-2">

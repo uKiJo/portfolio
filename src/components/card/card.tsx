@@ -33,11 +33,9 @@ const Card: React.FC<CardProps> = ({
       <div className="grow flex flex-col w-full text-lgrey dark:text-txt">
         <div className="grow py-4">
           <h1 className="xs:mb-1 md:text-lg font-semibold">{title}</h1>
-          <p className="md:text-sm xs:text-xs text-txt-secondary">
-            {description}
-          </p>
+          <p className="md:text-sm xs:text-xs text-dgrey">{description}</p>
         </div>
-        <div className="h-[1px] w-full bg-txt-secondary opacity-50 mb-4"></div>
+        <div className="h-[1px] w-full bg-dgrey opacity-50 mb-4"></div>
         <div className="flex">
           <a
             className="p-2 dark:stroke-txt stroke-lgrey cursor-pointer hover:stroke-lsecondary dark:hover:stroke-lsecondary social-media"

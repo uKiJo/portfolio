@@ -20,13 +20,13 @@ const Hero: React.FC = () => {
   return (
     <header className="mb-24">
       <div className="flex md:flex-row xs:flex-col justify-between items-center h-min font-poppins text-primary dark:text-txt">
-        <div className="content">
+        <div>
           <Trail>
             <h1 className="lg:text-6xl md:text-[44px] sm:text-4xl xs:text-3xl font-semibold leading-14 md:mb-10 xs:mb-6">
               Hi, I am Youn<span className="text-lsecondary">e</span>s
             </h1>
 
-            <p className="lg:text-[22px] lg:leading-8 md:text-xl xs:text-base lg:max-w-md md:max-w-sm font-light text-txt-secondary md:mb-10 xs:mb-6 ">
+            <p className="lg:text-[22px] lg:leading-8 md:text-xl xs:text-base lg:max-w-md md:max-w-sm font-light dark:text-dgrey text-lgrey md:mb-10 xs:mb-6 ">
               Welcome to my frontend development portfolio, where i bring ideas
               to life by transforming them into visually stunning apps. Let's
               collaborate and build something amazing together!

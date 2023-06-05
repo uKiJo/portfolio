@@ -6,8 +6,8 @@ interface DescriptionProps {
 
 const Description: React.FC<DescriptionProps> = ({ children }) => {
   return (
-    <div className="mb-8">
-      <p className=" md:text-xl xs:text-base md:max-w-md  xs:max-w-[80%] font-light sm:m-0 xs:m-auto">
+    <div className="mb-8 ">
+      <p className="lg:text-[22px] lg:leading-8 md:text-xl xs:text-base md:max-w-md  font-light sm:m-0 xs:m-auto dark:text-dgrey text-lgrey">
         {children}
       </p>
     </div>

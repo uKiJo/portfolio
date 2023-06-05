@@ -14,12 +14,12 @@ const Contact: React.FC<ContactProps> = (props) => {
     delay: 700,
   });
   return (
-    <section className="app-container sm:w-4/5 mx-auto">
+    <section className="app-container xs:w-4/5 mx-auto">
       <Heading style="dark:text-txt text-lgrey sm:text-start xs:text-center">
         Get in touch
       </Heading>
-      <animated.div style={contactProp}>
-        <div className="font-poppins text-txt-secondary pb-6 mb-10 sm:p-0 xs:px-12">
+      <animated.div style={contactProp} className="pb-6">
+        <div className="font-poppins text-txt-secondary pb-6 mb-10">
           <div className="text-xl md:w-1/2 mb-6 md:text-xl xs:text-base">
             <Description>
               I am currently looking for an opportunity, so if you are looking

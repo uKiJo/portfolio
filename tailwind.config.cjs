@@ -13,7 +13,7 @@ module.exports = {
         lgrey: "#2C4151",
         "lgrey-0": "rgb(44 65 81 / 0)",
         txt: "#D9D9D9",
-        "txt-secondary": "#777E90",
+        dgrey: "#97A1BF",
       },
       fontFamily: {
         poppins: "Poppins",

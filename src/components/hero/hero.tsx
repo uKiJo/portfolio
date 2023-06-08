@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
               Hi, I am Youn<span className="text-lsecondary">e</span>s
             </h1>
 
-            <p className="lg:text-[22px] lg:leading-8 md:text-xl xs:text-base lg:max-w-md md:max-w-sm font-light dark:text-dgrey text-lgrey md:mb-10 xs:mb-6 ">
+            <p className="lg:text-[22px] lg:leading-8 md:text-xl xs:text-base lg:max-w-md md:max-w-sm font-extralight dark:text-dgrey text-lgrey md:mb-10 xs:mb-6 ">
               Welcome to my frontend development portfolio, where i bring ideas
               to life by transforming them into visually stunning apps. Let's
               collaborate and build something amazing together!

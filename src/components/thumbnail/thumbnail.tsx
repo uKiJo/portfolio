@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
-import './thumbnails.scss';
+import "./thumbnails.scss";
 
 interface ThumbnailProps {
   image: string;
@@ -10,7 +10,7 @@ interface ThumbnailProps {
 
 const Thumbnail: React.FC<ThumbnailProps> = ({ title, image }) => {
   return (
-    <div className="w-48 h-32 p-4 dark:bg-gradient-180 dark:from-lgrey-0 dark:to-lgrey shadow-card2 hover:shadow-card4 hover:-translate-y-1 cursor-pointer rounded overflow-hidden flex justify-center transition">
+    <div className="w-48 h-32 p-4 bg-gradient-180 from-gray-100 to-white dark:bg-transparent dark:bg-gradient-180 dark:from-lgrey-0 dark:to-lgrey shadow-card2 hover:shadow-card4 hover:-translate-y-1 cursor-pointer rounded overflow-hidden flex justify-center transition">
       <Link to="/projects">
         <img className="h-full w-full" src={image} alt={title} />
       </Link>

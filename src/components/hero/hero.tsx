@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           className="lg:w-[350px] md:w-72 xs:w-60 xs:mt-12"
           style={imageAnimation}
         >
-          <img src={illustration} alt="me" />
+          <img src={illustration} alt="me" width="100%" height="100%" />
         </animated.div>
       </div>
     </header>

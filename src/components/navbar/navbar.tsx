@@ -37,7 +37,7 @@ const Navbar: React.FC<NavbarProps> = (props) => {
 
       <animated.div
         style={isSmallScreen ? style : undefined}
-        className={`flex bp:static xs:fixed xs:top-0 w-full xs:left-0 grow overflow-hidden md:flex-row xs:flex-col items-center md:justify-between xs:justify-start w-full z-10 bp:bg-[transparent] bp:dark:bg-[transparent] xs:bg-txt xs:dark:bg-lprimary`}
+        className={`flex bp:static xs:fixed xs:top-0 w-full xs:left-0 grow overflow-hidden md:flex-row xs:flex-col items-center md:justify-between xs:justify-start z-10 bp:bg-[transparent] bp:dark:bg-[transparent] xs:bg-txt xs:dark:bg-lprimary`}
       >
         <div className="relative flex bp:flex-row xs:flex-col md:justify-start bp:justify-center font-poppins font-semibold text-primary dark:text-txt w-full bp:p-0 xs:p-12">
           {items.map((item, i) => (

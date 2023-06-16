@@ -63,19 +63,35 @@ const Navbar: React.FC<NavbarProps> = (props) => {
           <div className="p-2">
             <SwitchButton />
           </div>
-          <a className="p-2 inline-block social-media" href="#">
+          <a
+            className="p-2 inline-block social-media"
+            href="#"
+            aria-label="Facebook account"
+          >
             <FiFacebook size={20} />
           </a>
 
-          <a className="p-2 inline-block social-media" href="#">
+          <a
+            className="p-2 inline-block social-media"
+            href="#"
+            aria-label="Twitter account"
+          >
             <FiTwitter size={20} />
           </a>
 
-          <a className="p-2 inline-block social-media" href="#">
+          <a
+            className="p-2 inline-block social-media"
+            href="#"
+            aria-label="Linkedin account"
+          >
             <FiLinkedin size={20} />
           </a>
 
-          <a className="p-2 inline-block social-media" href="#">
+          <a
+            className="p-2 inline-block social-media"
+            href="#"
+            aria-label="Github account"
+          >
             <FiGithub size={20} />
           </a>
         </div>

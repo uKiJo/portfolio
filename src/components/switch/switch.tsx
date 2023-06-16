@@ -13,6 +13,7 @@ const SwitchButton: React.FC<SwitchProps> = (props) => {
     <form>
       <div style={{ display: "flex", alignItems: "center" }}>
         <Switch.Root
+          aria-label="switch-root"
           className="SwitchRoot dark:bg-txt bg-primary"
           id="airplane-mode"
           onClick={() =>

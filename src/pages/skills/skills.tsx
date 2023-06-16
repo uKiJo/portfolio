@@ -66,7 +66,7 @@ const Skills: React.FC<SkillsProps> = (props) => {
               >
                 <Tooltip.Provider key={techs[i].id}>
                   <Tooltip.Root>
-                    <Tooltip.Trigger className="gap-8">
+                    <Tooltip.Trigger aria-label="tech icon" className="gap-8">
                       <div className="md:p-4 xs:p-3 dark:bg-lprimary bg-white dark:shadow-none shadow-card4 rounded">
                         <svg className="md:w-8 md:h-8 xs:w-7 xs:h-7">
                           <use href={sprite + `#icon-${techs[i].svg}`} />
